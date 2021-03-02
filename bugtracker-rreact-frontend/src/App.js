@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 import './App.css';
+import axios from 'axios';
 import BugReportForm from './components/BugReportForm'
 
 export default class App extends Component {
-
-  render() {
-    state={
-      name: '',
-      age: '',
-      salary: '',
-      hobby: ''
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       name: '',
+       age: '',
+       salary: '',
+       hobby: ''
     }
-
+  }
 
   changeHandler = (e) => {
     this.setState({[e.target.name] : e.target.value})
@@ -26,6 +28,9 @@ export default class App extends Component {
       console.log(response)
     })
   }
+  render() {
+    
+
     return (
       <BugReportForm state={this.state}  changeHandler={changeHandler} submitHandler={submitHandler}/>
     )
