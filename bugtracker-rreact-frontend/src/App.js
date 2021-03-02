@@ -27,7 +27,7 @@ export default class App extends Component {
     })
   }
     return (
-      <BugReportForm changeHandler={changeHandler} submitHandler={submitHandler}/>
+      <BugReportForm state={this.state}  changeHandler={changeHandler} submitHandler={submitHandler}/>
     )
   }
 }
