@@ -3,15 +3,14 @@ import axios from 'axios';
 import { Button, Form, Container, Header } from 'semantic-ui-react'
 
 export default class BugReportForm extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
+  
+state={
       name: '',
       age: '',
       salary: '',
       hobby: ''
     }
-  }
+
 
   changeHandler = (e) => {
     this.setState({[e.target.name] : e.target.value})
